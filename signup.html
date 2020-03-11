@@ -6,11 +6,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>회원가입</title>
-
-    <link rel="stylesheet" href="assets/css/style.min.css" />
-    <link rel="stylesheet" href="assets/css/modules.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="public/css/style.min.css" />
+    <link rel="stylesheet" href="public/css/modules.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
     <style>
       body {text-align: center;}
       input {height: 40px;}
@@ -21,17 +20,12 @@
  
  </style>
   </head>
-  <!-- End Head -->
 
-  <body class="default">
-    <!--
-START MODULE AREA 1: Header 3
--->
-<header class="MOD_HEADER3">
+<body>
+<header>
   <div class="MOD_HEADER3_SocialBarContainer">
     <div data-layout="_r" class="MOD_HEADER3_SocialBar">
       <div class="MOD_HEADER3_SocialIcons">
-        
         <div class="menubar">
           <nav>
           <ul>
@@ -55,7 +49,6 @@ START MODULE AREA 1: Header 3
             </li>
             <li>
               <li><a href="#" class="m" onclick="myFunction()">Agents register</a></li>
-        
             </li>
           </ul></nav>
         </div>
@@ -69,17 +62,12 @@ START MODULE AREA 1: Header 3
   </div>
 </header>
 
-
-      
-    </header>
-
-    <!--
-  START MODULE AREA 2: Page Title 1
---><main>
+  <main>
     <section>
       <form
       name="registerform"
-      action="/sigup"
+      id="my-form"
+      action="/signup"
       method="post"
     >
     <div data-layout="_r">
@@ -104,6 +92,7 @@ START MODULE AREA 1: Header 3
         >
           <input type="password" name="userpw" placeholder="Password"
           required="required"
+          id="pass"
           aria-required="true" />
         </td>
       </tr>
@@ -118,6 +107,7 @@ START MODULE AREA 1: Header 3
           aria-required="true"
           value=""
           name="confirmuserpassword"
+          id="pass-check"
         />
         </td>
       </tr>
@@ -160,7 +150,8 @@ START MODULE AREA 1: Header 3
           type="submit"
           value="create"
           class="btn1" 
-          onclick="signin()"
+          id="submitt"
+          onclick="()"
         />
         </td>
       </tr>
@@ -170,8 +161,10 @@ START MODULE AREA 1: Header 3
     </section>
   </main>
  
-    <script>
-      function signin() {
+  <div id=bitwise-footer style=text-align:center;margin-top:3em;padding:1em;color:#aaaaaa;font-size:0.75em;font-style:italic;>Hosted by the team <a href=http://www.bitwise.io/ target=_blank class="r" class="r">K-Shield</a></div>
+   
+   <script>
+      function signup() {
         alert("가입되었습니다");
       }
       function myFunction() {
@@ -180,9 +173,24 @@ START MODULE AREA 1: Header 3
       function check() {
         alert("사용 가능한 ID입니다");
       }
+      window.onload=function(){
+  document.getElementById('my-form').onsubmit=function(){
+   var pass=document.getElementById('pass').value;
+   var passCheck=document.getElementById('pass-check').value;
+   
+   if(pass==passCheck){
+    alert('가입되었습니다');
+    location.href="login.html";
+   }else{
+    alert('비밀번호가 일치하지 않습니다.');
+     return false; 
+   }
+   
+  }
+ }
+
       </script>
-    
+
 <script src="assets/js/index.js"></script>
-    <div id=bitwise-footer style=text-align:center;margin-top:3em;padding:1em;color:#aaaaaa;font-size:0.75em;font-style:italic;>Hosted by the team <a href=http://www.bitwise.io/ target=_blank class="r" class="r">K-Shield</a></div>
   </body>
 </html>

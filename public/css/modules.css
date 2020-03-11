@@ -259,17 +259,17 @@ a.btn:hover,
 button:hover {
   filter: brightness(1.1);
 }
-a.btn1,
+a.previous,
 button {
-  background-color: #9292929d;
-  color: black;
-  text-decoration: none;
-  display: inline-block;
-  padding: 1em;
-  border-radius: 5px;
-  font-family: sans-serif;
-  font-size: 1em;
-  cursor: pointer;
+    background-color: #9292929d;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 1em;
+    cursor: pointer;
 }
 a.btn:hover,
 button:hover {

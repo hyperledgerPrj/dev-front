@@ -130,7 +130,7 @@ a.text:visited {
   font-size: 30px;
   font-family: 'Times New Roman', Times, serif;
 }
-a.m:link {
+a.view:link {
   color: white;
   background-color: transparent;
   text-decoration: none;
@@ -232,7 +232,7 @@ a.m:link {
   clear: left;
 }
 
-a.w {
+a.my_page {
   color: rgb(161, 228, 255);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

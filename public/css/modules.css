@@ -1454,7 +1454,8 @@ textarea {
 
 /* promobox1 */
 .MOD_PROMOBOX1 > [data-layout='_r'] {
-  padding: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .MOD_PROMOBOX1_Background {
